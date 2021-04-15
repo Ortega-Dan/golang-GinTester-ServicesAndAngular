@@ -5,15 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Connect to server",
+            "name": "Launch Package",
             "type": "go",
-            "request": "attach",
-            "preLaunchTask": "delve",
-            "mode": "remote",
-            "remotePath": "${workspaceFolder}",
-            "port": 23456,
-            "host": "127.0.0.1",
-            "cwd": "${workspaceFolder}"
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}"
         }
     ]
 }
