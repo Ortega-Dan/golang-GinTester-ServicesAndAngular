@@ -25,7 +25,6 @@ func main() {
 
 	// Adding endpoints
 	r.GET("/ping", func(c *gin.Context) {
-
 		// panic("wrong")
 		c.JSON(http.StatusOK, gin.H{
 			"message": "pong",

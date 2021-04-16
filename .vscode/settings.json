@@ -1,0 +1,15 @@
+// DISCLAIMER: This command only works on Linux for now (possibly on mac)
+// For this to work install the following vscode extension: wk-j.save-and-run
+// And place this config on .vscode/settings.json
+{
+    "saveAndRun": {
+        "commands": [
+            {
+                "match": ".*",
+                // ADVANCED config ONLY works with CLI configs for launch.json and tasks.json
+                "cmd": "tempo=$(ps auxe|grep dlv|grep \"${workspaceFolder}\"|head -n 1) && kill $(echo $tempo |awk '{print $2}') && toSearch=$(echo $tempo |awk -F GIO_LAUNCHED_DESKTOP_FILE_PID= '{print $2}'|awk '{print $1}') && kill $(ps auxe|grep env.ELECTRON_RUN_AS_NODE|grep golang|grep danort|grep $toSearch|awk '{print $2}'|head -n 1)",
+                "silent": true
+            }
+        ]
+    }
+}
