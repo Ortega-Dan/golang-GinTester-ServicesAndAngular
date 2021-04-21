@@ -2,3 +2,5 @@
 /ginTester
 /ginTester.exe
 /target/
+server.key
+*.crt

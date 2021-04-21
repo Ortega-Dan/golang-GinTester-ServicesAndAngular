@@ -32,5 +32,10 @@ func main() {
 	})
 
 	// running it
-	r.Run(":8023")
+	// running with ssl
+	// err := r.RunTLS(":8023", "certificate.crt", "server.key")
+	err := r.Run(":8023")
+	if err != nil {
+		panic(err)
+	}
 }
