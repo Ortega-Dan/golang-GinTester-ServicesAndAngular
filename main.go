@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-contrib/static"
@@ -26,6 +27,7 @@ func main() {
 	// Adding endpoints
 	r.GET("/ping", func(c *gin.Context) {
 		// panic("wrong")
+		fmt.Println("ping get request")
 		c.JSON(http.StatusOK, gin.H{
 			"message": "pong",
 		})
