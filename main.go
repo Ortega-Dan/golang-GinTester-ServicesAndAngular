@@ -9,7 +9,7 @@ import (
 )
 
 // don't forget to add the last "/" at the end of the path
-var staticDir string = "../../typescript/ePortfolio/dist/ePortfolio/"
+var staticDir string = "../../../typescript/ePortfolio/dist/ePortfolio/"
 
 func main() {
 
